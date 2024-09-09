@@ -141,14 +141,14 @@ Repeat Steps 1-11 on previous dataset, using Red Wine Dataset.
 		
 ## Results
 **White Wine**
-`39/39 - 0s - 5ms/step - accuracy: 0.9976 - loss: 0.0155`
+* `39/39 - 0s - 5ms/step - accuracy: 0.9976 - loss: 0.0155`
 
-`Loss: 0.015487316064536572, Accuracy: 0.9975510239601135`
+* `Loss: 0.015487316064536572, Accuracy: 0.9975510239601135`
 
 **Red Wine**
-`13/13 - 0s - 15ms/step - accuracy: 0.7500 - loss: 0.6183`
+* `13/13 - 0s - 15ms/step - accuracy: 0.7500 - loss: 0.6183`
 
-`Loss: 0.6182871460914612, Accuracy: 0.75`
+* `Loss: 0.6182871460914612, Accuracy: 0.75`
 
 **Combined**
 * ***Neural Network Model***
@@ -160,7 +160,13 @@ Repeat Steps 1-11 on previous dataset, using Red Wine Dataset.
 	`Accuracy Score : 0.41846153846153844`
 
 ## Summary
+The white wine model provided the most sufficient, valid data output with a loss of approximately 0.016 (1.6%) and accuracy of 0.98 (98%). This illustrates that errors occurred in less than 2% of the iterations performed by this model. It can also be stated that a majority of predictions made by this model were correct.
 
+The red wine model provided less sufficient, valid data output with a loss of approximately 0.62 (62%) and accuracy of 0.75 (75%). This illustrates that errors occurred in more than half of the iterations performed by this model. It can also be stated that a majority of predictions made by this model were correct.
+
+The combined model provided expected performance results, with a loss of approximately 0.16 (16%), and accuracy of 0.94 (94%). This illustrates that by combining the datasets, the percentage of correct predictions only decreased by 4% and the model's iteration errors fell into a reasonable range of 15%.
+
+After reviewing the results, it is evident that combining the datasets provided more data for the learning capabilities of our models. This led to more realistic loss and accuracy results. Another key factor in the success of this project analysis is the recategorization of the quality data. By grouping the data into 3 categories versus the original 11 categories, the model was able to eliminate outliers that led to decreased accuracy scores achieved by similar models.
 
 
 ## References
