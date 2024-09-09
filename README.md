@@ -3,7 +3,7 @@
 
 **Purpose**
 
-The purpose of the analysis is to determine if the __________ model can accurately predict the quality of a wine based on physiochemical properties, assigning wines a low, average, or high score.
+The purpose of this project is to provide improved wine quality predictions based on physiochemical properties using neural network and random forest models.
 
 **Dataset**
 
@@ -13,7 +13,9 @@ https://archive.ics.uci.edu/dataset/186/wine+quality
 The data points in the datasets are based on data from the 2009 paper, Modeling wine preferences by data mining from physicochemical properties.
 https://www.sciencedirect.com/science/article/abs/pii/S0167923609001377?via%3Dihub
 
-The combined dataset of 6,497 data points, used to perform this analysis is comprised of columns including the following variables:
+The repository included 2 datasets, one for red wine and another for white wine. The red wine dataset contained 1,599 data points and the white wine dataset contained 4,898 data points. The data was collected from the Vinho Verde region in the northwest of Portugal. Each wine was analyzed, and quality assessed between 2004 and 2007 by the Viticulture Commission of the Vinho Verde Region.
+
+The datasets included the following columns / variables:
 - **Fixed Acidity**: non-volatile acid found in wine which are tartaric, malic, citric, and succinic.
 - **Volatile Acidity**: the acidic elements of a wine that are gaseous; aroma
 - **Citric Acid**: weak organic acid, often used as a natural preservative or additive to food/drink; sour taste
@@ -40,6 +42,7 @@ RandomOverSampler
 ## Data & Modeling Approach
 ### Data Preprocessing
 1. Data Preparation: Import files, establish DataFrames, and evaluate the columns and features.
+- 
 - Originally, 2 separate datasets existed, one for red wine with 1,599 data points and the other for white wine with 4,898 data points. As part of the data preparation process, we combined these datasets, totaling 6,497 data points. 
 2. 
 ### Compiling, Training, and Evaluating the Model
@@ -63,7 +66,9 @@ Diehm, Jan, and Lars Verspohl. “Wine & Math: A Model Pairing.” _The Pudding_
 
 Parrish, Michael. “What Are Wine Varietals? Comprehensive Guide to Grape Varieties | the Tasting Alliance | the Tasting Alliance.” _The Tasting Alliance_, 14 Mar. 2024, thetastingalliance.com/what-are-wine-varietals-comprehensive-guide-to-grape-varieties/. Accessed 5 Sept. 2024.
 
-The Wine Wankers. “A Great Collection of Wine Infographics.” _The Wine Wankers_, 12 Feb. 2014, winewankers.com/2014/02/12/a-great-collection-of-wine-infographics/. Accessed 5 Sept. 2024.
+Schull, Trista. “How Wine Is Made,” _Witches Falls Winery_, 7 Sept. 2022, witchesfalls.com.au/blogs/news/how-wine-is-made. Accessed 6 Sept. 2024.
+
+The Wine Wankers. “A Great Collection of Wine Infographics,” _The Wine Wankers_, 12 Feb. 2014, winewankers.com/2014/02/12/a-great-collection-of-wine-infographics/. Accessed 5 Sept. 2024.
 
 Theethat Anuraksoontorn. “Wine Quality Prediction with Python - Analytics Vidhya - Medium.” _Medium_, Analytics Vidhya, 21 Sept. 2020, medium.com/analytics-vidhya/wine-quality-prediction-with-python-695939d34d87. Accessed 5 Sept. 2024.
 
