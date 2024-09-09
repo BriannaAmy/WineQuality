@@ -3,7 +3,7 @@
 
 **Purpose**
 
-The purpose of this project is to provide improved wine quality predictions based on physiochemical properties using neural network and random forest models.
+The purpose of this project is to provide improved wine quality predictions based on physiochemical properties using neural network and random forest models. In this model, we recategorized quality measurement data and combined datasets as a means to reduce outlier distortion and improved machine learning capabilities.
 
 **Dataset**
 
