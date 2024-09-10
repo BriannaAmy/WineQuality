@@ -41,6 +41,7 @@ RandomOverSampler
 
 ## Data & Modeling Approach
 **Perform Initial imports for all datasets**
+
 `import pandas as pd`
 
 `from pathlib import Path`
@@ -116,6 +117,7 @@ Repeat Steps 1-11 on previous dataset, using Red Wine Dataset.
 12. Defined labels for the 3 classes.
 13. Calculated accuracy score.
 14. Display Feature Importances:
+    
 `[(0.1228541834756794, 'alcohol'),`
 
  `(0.10213457013517334, 'volatile acidity'),`
