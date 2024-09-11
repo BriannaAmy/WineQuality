@@ -1,11 +1,11 @@
 # Wine Quality Prediction Model
 ## Overview
 
-**Purpose**
+### Purpose
 
 The purpose of this project is to provide improved wine quality predictions based on physiochemical properties using neural network and random forest models. In this model, we recategorized quality measurement data and combined datasets as a means to reduce outlier distortion and improved machine learning capabilities.
 
-**Dataset**
+### Dataset
 
 Datasets cited in this project are from the UC Irvine Machine Learning Repository Website.
 https://archive.ics.uci.edu/dataset/186/wine+quality
@@ -29,7 +29,7 @@ The datasets included the following columns / variables:
 - **Alcohol**: percent alcohol content of the wine
 - **Quality**: overall score between 0 and 10
 
-**Methods and Technologies Utilized**
+### Methods and Technologies Utilized
 * **Scikit-learn**
 train_test_split, StandardScaler, RandomForestClassifier, confusion_matrix, accuracy_score, classification_report
 * **Python**
@@ -40,135 +40,18 @@ RandomOverSampler
 * **Seaborn**
 
 ## Data & Modeling Approach
-**Perform Initial imports for all datasets**
-
-`import pandas as pd`
-
-`from pathlib import Path`
-
-`from sklearn.ensemble import RandomForestClassifier`
-
-`from sklearn.preprocessing import StandardScaler`
-
-`from sklearn.model_selection import train_test_split`
-
-`from sklearn.metrics import confusion_matrix, accuracy_score, classification_report`
-
-`%matplotlib inline`
-
-`from sklearn.model_selection import train_test_split`
-
-`from sklearn.preprocessing import StandardScaler`
-
-`from sklearn.metrics import accuracy_score`
-
-`import tensorflow as tf`
-
-`from imblearn.over_sampling import RandomOverSampler`
-
-**White Wine Dataset**
-*4,898 data points*
-1. Read csv file. Convert to DataFrame. Examine info and value counts.
-2. Define a function to categorize the quality:
-`def categorize_quality(quality):`
-    `if 1 <= quality <= 3:
-        return '0'
-    elif 4 <= quality <= 6:
-        return '1'
-    elif 7 <= quality <= 9:
-        return '2'`
-3. Apply the function to create the 'quality_category' column and verify changes.
-4. Drop 'quality' column.
-5. Review 'quality_category' value counts.
-6. Remove quality target from features data. Split training/test datasets.
-7. Apply `RandomOverSampler` and review new class distribution.
-8. Preprocess numerical data for neural network. Create `StandardScaler` instances. Fit and scale the data. Review the shape of the scaled data to check for inconsistencies.
-9. Define the deep learning model. Change output layer units to 3 to match the number of unique values in the target variable.
-`nn_model = tf.keras.models.Sequential()`
-
-`nn_model.add(tf.keras.layers.Dense(units=16, activation="relu", input_dim=12))`
-
-`nn_model.add(tf.keras.layers.Dense(units=16, activation="relu"))`
-
-`nn_model.add(tf.keras.layers.Dense(units=3, activation="softmax"))`
-
-11. Compile the Sequential model together and customize metrics. Convert 'y_train' to categorical. Train the model.
-12. Evaluate the model using the test data.
-
-**Red Wine Dataset**
-*1,598 data points*
-Repeat Steps 1-11 on previous dataset, using Red Wine Dataset. 
-
-**Combined Datasets**
-*6,496 data points*
-**Neural Network Model**
-1. Convert white and red DataFrames into Combined DataFrame. Examine info and value counts.
-2. Repeat Steps 2-11 of previous datasets.
-**Random Forest Model**
-3. Drop 'quality_category'.
-4. Define features set. Define target vector. Review 'quality' value counts
-5. Apply `RandomOverSampler` and review new class distribution.
-6. Split into Train and Test sets. Create `StandardScaler` instance. Fit and scale the data. 
-7. Assuming 'target_variable' is the name of your target column, split data into training and testing sets. Create and train the `RandomForestClassifier`.
-8. Fit the model. 
-9. Make predictions using the testing data.
-10. Changed 'model' to 'rf_model'. Assuming 'rf_model' is your trained classification model and 'X_test', 'y_test' are your test datasets.
-11. Calculated confusion matrix.
-12. Defined labels for the 3 classes.
-13. Calculated accuracy score.
-14. Display Feature Importances:
-    
-`[(0.1228541834756794, 'alcohol'),`
-
- `(0.10213457013517334, 'volatile acidity'),`
- 
-` (0.10185320716189483, 'density'),`
-
-` (0.09113809109468214, 'total sulfur dioxide'),`
-
-` (0.08677057522512018, 'sulphates'),`
-
-` (0.08668949352072257, 'chlorides'),`
-
- `(0.08611019795650059, 'free sulfur dioxide'),`
- 
- `(0.08401862460115347, 'residual sugar'),`
- 
- `(0.08355183861811914, 'pH'),`
- 
-` (0.0803368568620962, 'citric acid'),`
-
-` (0.07454236134885828, 'fixed acidity')]`
+### Preprocessing Data
+### Compile, Train, Evaluate Models
 
 		
 ## Results
-**White Wine**
-* `39/39 - 0s - 5ms/step - accuracy: 0.9976 - loss: 0.0155`
+### Neural Network
 
-* `Loss: 0.015487316064536572, Accuracy: 0.9975510239601135`
+### Random Forest Model
 
-**Red Wine**
-* `13/13 - 0s - 15ms/step - accuracy: 0.7500 - loss: 0.6183`
-
-* `Loss: 0.6182871460914612, Accuracy: 0.75`
-
-**Combined**
-* ***Neural Network Model***
-	`51/51 - 0s - 5ms/step - accuracy: 0.9415 - loss: 0.1556`
-
-	`Loss: 0.15556824207305908, Accuracy: 0.9415384531021118`
-
-* ***Random Forest Model***
-	`Accuracy Score : 0.41846153846153844`
 
 ## Summary
-The white wine model provided the most sufficient, valid data output with a loss of approximately 0.016 (1.6%) and accuracy of 0.98 (98%). This illustrates that errors occurred in less than 2% of the iterations performed by this model. It can also be stated that a majority of predictions made by this model were correct.
 
-The red wine model provided less sufficient, valid data output with a loss of approximately 0.62 (62%) and accuracy of 0.75 (75%). This illustrates that errors occurred in more than half of the iterations performed by this model. It can also be stated that a majority of predictions made by this model were correct.
-
-The combined model provided expected performance results, with a loss of approximately 0.16 (16%), and accuracy of 0.94 (94%). This illustrates that by combining the datasets, the percentage of correct predictions only decreased by 4% and the model's iteration errors fell into a reasonable range of 15%.
-
-After reviewing the results, it is evident that combining the datasets provided more data for the learning capabilities of our models. This led to more realistic loss and accuracy results. Another key factor in the success of this project analysis is the recategorization of the quality data. By grouping the data into 3 categories versus the original 11 categories, the model was able to eliminate outliers that led to decreased accuracy scores achieved by similar models.
 
 
 ## References
