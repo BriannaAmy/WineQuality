@@ -142,10 +142,11 @@ The datasets included the following columns/variables:
 ***Combined***
 * Initial Model (w/o Quality Category): accuracy: 0.556 - loss: 1.037
 * Optimized Model (w/ Quality Category): accuracy: 0.827 - loss: 0.391
+  
 ### Random Forest Model
 ***Combined***
-* Initial Model (w/o Quality Category): 0.689
-* Optimized Model (w/ Quality Category): 0.673
+* Initial Model (w/o Random Sampler): 0.689
+* Optimized Model (w/ Random Sampler): 0.673
 
 ## Summary
 
@@ -153,7 +154,9 @@ Combining datasets improved the capabilities of the neural network model.
 
 Recategorizing the quality response from 1 range to 3 separate ranges, significantly improved the capabilities of the neural network model.
 
-Recategorizing the quality response from 1 range to 3 separate ranges, did not provide significant benefits in the random forest models.
+The use of random sampler did not provide significant benefits in the random forest model results.
+
+Overall, the quality category within the neural network model provided the most successful outcome.
 
 Access to additional data would greatly improve the capabilities of both models.
 
