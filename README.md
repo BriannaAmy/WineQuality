@@ -2,9 +2,7 @@
 
 ## Overview
 ### Background
-INCLUDE INFO ABOUT:
-WINE REGIONS, CHEMISTRY, QUALITY STANDARDS
-PREVIOUS ANALYSIS & RESULTS
+
 
 ### Purpose
 
@@ -152,11 +150,6 @@ The datasets included the following columns/variables:
 * Optimized Model (w/ Quality Category): 0.673
 
 ## Summary
-COMBINING DATASETS
-NN W/O SAMPLER
-NN W/ SAMPLER
-RF W/O SAMPLER
-RF W/ SAMPLER
 
 ## References
 
