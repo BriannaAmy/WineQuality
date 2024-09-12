@@ -1,8 +1,6 @@
 # Wine Quality Prediction Model
 
 ## Overview
-### Background
-
 
 ### Purpose
 
@@ -150,6 +148,16 @@ The datasets included the following columns/variables:
 * Optimized Model (w/ Quality Category): 0.673
 
 ## Summary
+
+Combining datasets improved the capabilities of the neural network model.
+
+Recategorizing the quality response from 1 range to 3 separate ranges, significantly improved the capabilities of the neural network model.
+
+Recategorizing the quality response from 1 range to 3 separate ranges, did not provide significant benefits in the random forest models.
+
+Access to additional data would greatly improve the capabilities of both models.
+
+Climate, altitude, location, varietal, wine brand, price point, bottle shape, and cork vs screw top are examples of additional variables that should be considered in future quality prediction models. 
 
 ## References
 
